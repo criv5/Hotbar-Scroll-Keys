@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "hotbar-scroll-keys",
+	"version": "${version}",
+	"name": "Hotbar Scroll Keys",
+	"description": "Implements keybinds to scroll left and right in the hotbar",
+	"authors": [
+		"Criv"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/hotbar-scroll-keys/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"criv.hsk.HotbarScrollKeys"
+		],
+		"client": [
+			"criv.hsk.HotbarScrollKeysClient"
+		]
+	},
+	"mixins": [
+		"hotbar-scroll-keys.mixins.json",
+		{
+			"config": "hotbar-scroll-keys.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.3",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+	}
+}
